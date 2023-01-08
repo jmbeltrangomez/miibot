@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>06 Ultrasonidos | Miibot </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-138"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Miibot</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Miibot</a></li>
+   <li><a href="montaje.html" class="no-ch">Montaje</a></li>
+   <li><a href="crumble.html" class="no-ch">Crumble</a></li>
+   <li class="current-page-parent"><a href="prcticas.html" class="current-page-parent daddy">Prácticas</a>
+   <ul>
+      <li><a href="01_movimientos.html" class="no-ch">01 Movimientos</a></li>
+      <li><a href="02_giros.html" class="no-ch">02 Giros</a></li>
+      <li><a href="03_touch_sensor.html" class="no-ch">03 Touch Sensor</a></li>
+      <li><a href="04_sparkles.html" class="no-ch">04 Sparkles</a></li>
+      <li><a href="05_seguidor_de_luz.html" class="no-ch">05 Seguidor de luz</a></li>
+      <li id="active"><a href="06_ultrasonidos.html" class="active no-ch">06 Ultrasonidos</a></li>
+      <li><a href="07_seguidor_de_lneas.html" class="no-ch">07 Seguidor de líneas</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="05_seguidor_de_luz.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="07_seguidor_de_lneas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">06 Ultrasonidos</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id417">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Medidor de Distancia</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta417_120_2" class="block iDevice_content">
+<div class="exe-text"><p>En esta ocasión, vamos a ver cómo funciona el detector de ultrasonidos. </p>
+<p>La disposición en el Miibot será la siguiente:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 800px;"><img src="20220529_113941.jpg" alt="Miibot ultrasonidos" title="Miibot ultrasonidos" width="800" height="1067" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Para ello, vamos a observar el valor que adquiere una variable a la que se le asigna la magnitud (en centímetros) de distancia a la que se encuentra un objeto del robot Maqueen.</p>
+<p>El código que se debe de establecer sería:</p>
+<ol>
+<li>Iniciar,</li>
+<li>Por siempre,</li>
+<li>Crear una variable que se denomine "distancia"</li>
+<li>Establecer en la variable "distancia" el valor detectado en la entrada "distancia en cm"</li>
+<li>Establecer una pausa de 1 segundo.</li>
+</ol>
+<p>El código creado en Crumble sería:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 399px;"><img src="practica6a.jpg" alt="Práctica6a" title="Práctica6a" width="399" height="174" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>En el bloque de distancia en centímetros tenemos que indicar en T el puerto al que lo hemos conectado y E donde recogemos la distancia en cm, que en nuestro caso, es el puerto A. De ahí, que en el código anterior, en el bloque de ultrasonidos aparezca T:A y E:A<br /><br /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id418">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Detector de obstáculos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta418_121_2" class="block iDevice_content">
+<div class="exe-text"><p>Existen ocasiones en las que se desea que el robot no choque contra un objeto. Para ello, al disponer del medidor de ultrasonidos, podemos configurar el programa de la manera que cuando esté a menos de una determinada distancia, se detenga y gire, de una manera aleatoria, para buscar una nueva trayectoria y evite ese objeto que le impide avanzar.</p>
+<p>Para que esto sea posible hay que programar el robot con un algoritmo con las siguientes instrucciones:</p>
+<ol>
+<li>Iniciar</li>
+<li>Bucle infinito</li>
+<li>Si la distancia es menor de 10 cm,</li>
+<li>Se debe de asignar a una variable "giro" un valor obtenido al azar entre 0 y 1.</li>
+<li>Si se obtiene 0, entonces</li>
+<li>El robot girará a la derecha, y</li>
+<li>Si se obtiene 1, entonces</li>
+<li>El robot girará a la izquierda, un determinado tiempo, para buscar una nueva trayectoria.</li>
+<li>Si la distancia es mayor de 10 cm,</li>
+<li>El robot avanzará a una determinada velocidad.</li>
+</ol>
+<p>Todo esto, según los bloques de código con Crumble, se traduciría en:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 400px;"><img src="practica6b.jpg" alt="Evitar obstáculos" title="Evitar obstáculos" width="400" height="395" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id419">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Seguir a un individuo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta419_122_2" class="block iDevice_content">
+<div class="exe-text"><p>Cuando tenemos un perro nos gusta que venga junto o detrás de nosotros o nosotras. Con un robot, como Miibot, podemos conseguir que venga también siguiéndonos. Si estamos a una distancia menor de un valor, nos seguirá, pero si nos distanciamos más, se despistará y comenzará a dar vueltas esperando encontrar a alguien que se aproxime a una distancia establecida para seguirlo. El robot se puede ir con cualquiera, nuestro perro, seguramente, no lo haría.</p>
+<p>El código del algoritmo que tendríamos que implementar debería ser:</p>
+<ol>
+<li>Iniciar</li>
+<li>Bucle infinito,</li>
+<li>Si el lector detecta que estamos a menos de 10 cm y a una distancia distinta de 0,</li>
+<li>El robot vendrá detrás, es decir, los dos motores avanzarán, pero si no es así,</li>
+<li>El robot, dará vueltas en un sentido esperando encontrar de nuevo a ese individuo que esté a menos de 10 cm para iniciar, de nuevo, su persecución.</li>
+</ol>
+<p>El código en Crumble, podría quedar del siguiente modo:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 401px;"><img src="practica6c.jpg" alt="Perseguidor" title="Perseguidor" width="401" height="267" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id420">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Tarea</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta420_318_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Construir un laberinto.</p>
+<p>Programar Miibot para que recorra todo el laberinto, desde la entrada hasta la salida.</p>
+<p>Cuando detecte a una cierta distancia un muro, deberá de corregir la trayectoria para que pueda abandonar el laberinto.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="05_seguidor_de_luz.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="07_seguidor_de_lneas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>

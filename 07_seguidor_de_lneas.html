@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>07 Seguidor de líneas | Miibot </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-139"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Miibot</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Miibot</a></li>
+   <li><a href="montaje.html" class="no-ch">Montaje</a></li>
+   <li><a href="crumble.html" class="no-ch">Crumble</a></li>
+   <li class="current-page-parent"><a href="prcticas.html" class="current-page-parent daddy">Prácticas</a>
+   <ul>
+      <li><a href="01_movimientos.html" class="no-ch">01 Movimientos</a></li>
+      <li><a href="02_giros.html" class="no-ch">02 Giros</a></li>
+      <li><a href="03_touch_sensor.html" class="no-ch">03 Touch Sensor</a></li>
+      <li><a href="04_sparkles.html" class="no-ch">04 Sparkles</a></li>
+      <li><a href="05_seguidor_de_luz.html" class="no-ch">05 Seguidor de luz</a></li>
+      <li><a href="06_ultrasonidos.html" class="no-ch">06 Ultrasonidos</a></li>
+      <li id="active"><a href="07_seguidor_de_lneas.html" class="active no-ch">07 Seguidor de líneas</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="06_ultrasonidos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejemplo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">07 Seguidor de líneas</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id421">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Lector del sensor infrarrojos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta421_113_2" class="block iDevice_content">
+<div class="exe-text"><p>En esta práctica vamos a utilizar el Line Sensor. Para colocarlo en la parte delantera, utilizaremos una pieza cilíndrica que se introducirá en uno de los agujeros del parachoques delantero.</p>
+<p>Una imagen del Line Sensor con el conector cilíndrico sería:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 400px;"><img src="line_sensor.jpg" alt="Line sensor" title="Line sensor" width="400" height="300" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Y el robot Miibot con el sensor conectado quedaría del siguiente modo:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 800px;"><img src="miibot_line_sensor.jpg" alt="miibot line sensor" title="miibot line sensor" width="800" height="1067" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Este sensor es un sistema reflexivo de infrarrojos. Tiene la posibilidad de ser usado como elemento analógico y digital.</p>
+<p>Para poder saber si detecta una línea o no, el sensor emite una luz infrarroja y dependiendo de si recibe o no, se clasificará en un valor 0 o 1.</p>
+<p>Si la señal que recibe nuestro robot es High o 1, habrá detectado una línea negra. En cambio, si la señal que recibe es Low o 0, estará sobre una superficie blanca.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id422">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Robot siguelíneas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta422_114_2" class="block iDevice_content">
+<div class="exe-text"><p>En esta práctica, se va a programar el robot para que se desplace por encima de una línea negra y la siga.</p>
+<p>El algoritmo que se tendrá que realizar será el siguiente:</p>
+<ol>
+<li>Iniciar,</li>
+<li>Bucle infinito,</li>
+<li>Si se cumple la condición de que el sensor siguelíneas detecta negro</li>
+<li>el robot debe de girar a la izquierda con un giro abierto (motor1 avanza a menor velocidad que el motor 2)</li>
+<li>Si no se cumple al condición (es zona blanca) girará a la derecha también con un giro abierto.</li>
+</ol>
+<ol></ol>
+<p>El Miibot se desplazará "rebotando" en la línea.</p>
+<p>El código realizado con Crumble sería:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 400px;"><img src="practica6d.jpg" alt="siguelíneas" title="siguelíneas" width="400" height="285" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id423">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Tatami</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta423_118_2" class="block iDevice_content">
+<div class="exe-text"><p>En esta ocasión, vamos a hacer que el robot Miibot no salga de un recinto delimitado por una línea negra.</p>
+<ol>
+<li>Iniciar,</li>
+<li>Por siempre,</li>
+<li>Si detectamos línea negra (A es nivel alto)</li>
+<li>los motores se pararán,</li>
+<li>el robot irá marcha atrás, para posteriormente</li>
+<li>girar hacia un lado.</li>
+<li>Si no se cumple la condición (A es nivel bajo),</li>
+<li>los motores avanzarán.</li>
+</ol>
+<p>En Crumble el código resultante sería:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 400px;"><img src="practica6e.jpg" alt="tatami" title="tatami" width="400" height="397" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id424">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Cuenta líneas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta424_119_2" class="block iDevice_content">
+<div class="exe-text"><p>En esta práctica, se va a plantear que el robot cuente una serie de líneas.</p>
+<p>El algoritmo que va a plantear es el siguiente:</p>
+<ol>
+<li>Iniciar,</li>
+<li>Establecer una variable igual al número de líneas que queremos que cuente,</li>
+<li>Si contador es igual al número establecido,</li>
+<li>los motores se detendrán</li>
+<li>Si no, se establecerá la condición de</li>
+<li>si detecta la línea negra,</li>
+<li>el robot parará un poco,</li>
+<li>avanzará un poco para salir de la línea</li>
+<li>y aumentará el contado en 1,</li>
+<li>si no,</li>
+<li>el robot avanzará.</li>
+</ol>
+<p>Utilizando Crumble, el programa quedaría de la siguiente forma:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 404px;"><img src="practica6f.jpg" alt="cuenta líneas" title="cuenta líneas" width="404" height="495" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id425">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Tarea</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta425_319_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Instalando los sensores de ultrasonidos y siguelíneas, se tiene que realizar un programa para que Miibot recorra un circuito siguelínea pero que al detectar un objeto que se encuentre en su camino, lo vadee para volver de nuevo al circuito trazado.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="06_ultrasonidos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejemplo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>

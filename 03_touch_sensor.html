@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>03 Touch Sensor | Miibot </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-135"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Miibot</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Miibot</a></li>
+   <li><a href="montaje.html" class="no-ch">Montaje</a></li>
+   <li><a href="crumble.html" class="no-ch">Crumble</a></li>
+   <li class="current-page-parent"><a href="prcticas.html" class="current-page-parent daddy">Prácticas</a>
+   <ul>
+      <li><a href="01_movimientos.html" class="no-ch">01 Movimientos</a></li>
+      <li><a href="02_giros.html" class="no-ch">02 Giros</a></li>
+      <li id="active"><a href="03_touch_sensor.html" class="active no-ch">03 Touch Sensor</a></li>
+      <li><a href="04_sparkles.html" class="no-ch">04 Sparkles</a></li>
+      <li><a href="05_seguidor_de_luz.html" class="no-ch">05 Seguidor de luz</a></li>
+      <li><a href="06_ultrasonidos.html" class="no-ch">06 Ultrasonidos</a></li>
+      <li><a href="07_seguidor_de_lneas.html" class="no-ch">07 Seguidor de líneas</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="02_giros.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="04_sparkles.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">03 Touch Sensor</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id405">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Instalación del Touch Sensor</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta405_113_2" class="block iDevice_content">
+<div class="exe-text"><p>En esta práctica, se va a instalar un pulsador al robot Miibot para que le podemos indicar el inicio y/o finalización de una tarea.</p>
+<p>De dispondrá en la parte de arriba y se conectará con un cable al puerto B de la Controladora.</p>
+<p>La disposición sería la siguiente:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 600px;"><img src="touch_sensor.jpg" alt="Touch sensor" title="Touch sensor" width="600" height="450" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id406">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">¿Qué es el Touch Sensor?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta406_114_2" class="block iDevice_content">
+<div class="exe-text"><p>Este módulo consiste en un pulsador.</p>
+<p>Un pulsador tiene dos estados posibles: conectado o desconectado, ON o OFF, 1 ó 0, HIGH o LOW</p>
+<p>Por ello, se considera como un sensor digital.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id407">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Práctica 1</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta407_115_2" class="block iDevice_content">
+<div class="exe-text"><p>En esta práctica, se va a ver el funcionamiento del Touch Sensor. </p>
+<p>El algoritmo que se va a desarrollar es el siguiente:</p>
+<ol>
+<li>Inicio,</li>
+<li>Esperar hasta que el Touch Sensor (B) está actividado (HI),</li>
+<li>Una vez pulsado, el robot avanzará a una determinada velocidad durante tres segundos,</li>
+<li>Se detendrá,</li>
+<li>Esperar hasta que volvamos a pulsar el Touch Sensor,</li>
+<li>retrocederá al punto inicial,</li>
+<li>y se detendrá.</li>
+</ol>
+<p>El código en Crumble sería:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 400px;"><img src="practica3a.jpg" alt="práctica 3 a" title="practica 3 a" width="400" height="422" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Si quisiéramos que este ciclo se repitiera indefinidamente, deberíamos introducir todo el código en un bucle "do forever loop", quedando del siguiente modo:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 400px;"><img src="practica3b.jpg" alt="Práctica3b" title="Práctica3b" width="400" height="464" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id408">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Práctica 2</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta408_116_2" class="block iDevice_content">
+<div class="exe-text"><p>Para esta práctica, vamos a cambiar el Touch Sensor de posición. Se va a colocar en la parte delantera.</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 800px;"><img src="practica3c_imagen.jpg" alt="Touch sensor delantero" title="Touch sensor delantero" width="800" height="616" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>De tal forma que vamos a diseñar un algoritmo que permite al robot retroceder y avanzar en una dirección distinta si el Touch Sensor, choca contra un objeto que se encuentre al avanzar.</p>
+<p>El algoritmo sería:</p>
+<ol>
+<li>Iniciar,</li>
+<li>Bucle infinito,</li>
+<li>Si Touch Sensor está pulsado,</li>
+<li>El robot se parará unos milisegundos,</li>
+<li>Retrocederá un poco</li>
+<li>y girará un determinado grado</li>
+<li>para continuar avanzando</li>
+<li>Si no se cumple esa condición,</li>
+<li>el robot avanzará indefinidamente.</li>
+</ol>
+<p>El código realizado en Crumble será:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 400px;"><img src="practica3c.jpg" alt="Práctica3c" title="Práctica3c" width="400" height="518" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id409">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Práctica 3</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta409_117_2" class="block iDevice_content">
+<div class="exe-text"><p>Al pulsar el Touch Sensor se puede detectar que comienza a avanzar inmediatamente mientras que el dedo que presiona está ejerciendo una fuerza sobre el sensor provocando que el robot se frene o se levante ligeramente desviando su trayectoria.</p>
+<p>Ese problema lo solucionamos añadiendo, después de pulsar el Touch Sensor, un tiempo de espera de milisegundos.</p>
+<p>Para mostrar esta situación, vamos a hacer un algoritmo que ejemplifique esta situación.</p>
+<ol>
+<li>Iniciar,</li>
+<li>En un bucle repetitivo de una serie de veces,</li>
+<li>Esperamos hasta que pulsemos el botón del Touch Sensor,</li>
+<li>para que avancemos durante unos segundos,</li>
+<li>paremos los motores,</li>
+<li>retrocedamos,</li>
+<li>para finalizar parando los motores.</li>
+</ol>
+<p>Se puede jugar, según el tiempo que se programe, las veces pulsadas y la velocidad, cuán de cerca se queda de un punto que se establezca.</p>
+<p>El código de Crumble, sería:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 400px;"><img src="practica3d.jpg" alt="Práctica3d" title="Práctica3d" width="400" height="489" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id410">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Tarea 1</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta410_314_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crear un algoritmo que haga que el robot se mueva por la periferia de una baldosa.</p>
+<p>Cada vez que tenga que girar, se tendrá que pulsar el Touch Sensor, de tal forma, que la pulsación provocará el giro de 90º y el avance de una arista, deteniéndose de nuevo a la espera de una nueva pulsación.</p>
+<p>Y así, sucesivamente.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id411">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Tarea 2</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta411_315_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Diseñar un laberinto con cajas. </p>
+<p>Crear un algoritmo para que el Miibot al chocar con una pared, se detenga, retroceda un poco, gire 90º y avance. Y así sucesivamente, hasta que consiga salir.</p>
+<p>Realizar el programa en Crumble y transferir a Miibot.</p>
+<p>Probar.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="02_giros.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="04_sparkles.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>

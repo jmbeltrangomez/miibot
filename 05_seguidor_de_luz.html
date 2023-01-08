@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>05 Seguidor de luz | Miibot </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-137"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Miibot</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Miibot</a></li>
+   <li><a href="montaje.html" class="no-ch">Montaje</a></li>
+   <li><a href="crumble.html" class="no-ch">Crumble</a></li>
+   <li class="current-page-parent"><a href="prcticas.html" class="current-page-parent daddy">Prácticas</a>
+   <ul>
+      <li><a href="01_movimientos.html" class="no-ch">01 Movimientos</a></li>
+      <li><a href="02_giros.html" class="no-ch">02 Giros</a></li>
+      <li><a href="03_touch_sensor.html" class="no-ch">03 Touch Sensor</a></li>
+      <li><a href="04_sparkles.html" class="no-ch">04 Sparkles</a></li>
+      <li id="active"><a href="05_seguidor_de_luz.html" class="active no-ch">05 Seguidor de luz</a></li>
+      <li><a href="06_ultrasonidos.html" class="no-ch">06 Ultrasonidos</a></li>
+      <li><a href="07_seguidor_de_lneas.html" class="no-ch">07 Seguidor de líneas</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="04_sparkles.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="06_ultrasonidos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">05 Seguidor de luz</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id414">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Miibot busca luz</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta414_119_2" class="block iDevice_content">
+<div class="exe-text"><p>En sección, se va a añadir el Light Sensor a nuestro Miibot, que se conectará al puerto C. Este tipo de sensor es analógico. Los valores que toma van desde 0 a 255.</p>
+<p>También tendremos los sparkles que seguirán conectados al puerto D.</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 800px;"><img src="light_sensor.jpg" alt="Light Sensor" title="Light Sensor" width="800" height="600" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Si deseamos conocer el rango de luz con el que vamos a trabajar en nuestro proyecto, se puede realizar el siguiente código. Exponemos el sensor a diferentes fuentes de luz y podremos ver en Crumble el valor que adopta en cada caso. Es muy importante realizar esta pequeña práctica para que, posteriormente, no tengamos problemas en su ejecución en una situación determinada.</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 399px;"><img src="practica5a.jpg" alt="Práctica5a" title="Práctica5a" width="399" height="201" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>En esta práctica, lo que se pretende es que el robot busque una fuente de luz intensa y la siga. Si no la encuentra, comenzará a dar vueltas sobre sí mismo para buscar esa luz que puede provenir de su entorno.</p>
+<p>El código que debemos de utilizar en este caso tiene que realizar lo siguiente:</p>
+<ol>
+<li>Para Siempre.</li>
+<li>Si el detector de luz  detecta una fuente de luz mayor de 140, entonces</li>
+<li>Los dos motores deben de avanzar, </li>
+<li>Si no la encuentra, entonces, comenzará a dar vueltas con motor 1 avanza y motor 2 avanza a 0.</li>
+</ol>
+<p>La imagen con el código sería:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 400px;"><img src="practica5b.jpg" alt="Práctica5b" title="Práctica5b" width="400" height="313" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id415">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Detección de oscuridad</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta415_112_2" class="block iDevice_content">
+<div class="exe-text"><p>En esta práctica vamos a crear un programa para que cuando el robot avanza por un trayecto y disminuya la intensidad de luz del entorno disminuirá la velocidad y encenderá los sparkles, apagándose de nuevo cuando aumente la intensidad lumínica.</p>
+<p>El algoritmo sería el siguiente:</p>
+<ol>
+<li>Iniciar,</li>
+<li>Para siempre,</li>
+<li>Si el nivel de luz que detecta el robot es menor de una cantidad determinada,</li>
+<li>el robot disminuirá la velocidad  y encenderá los sparkles,</li>
+<li>y si no, el robot tendrá los sparkles apagados y aumentará su velocidad.</li>
+</ol>
+<p>El programa realizado con Crumble sería:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 400px;"><img src="practica5c.jpg" alt="Práctica5c" title="Práctica5c" width="400" height="408" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p><br /><br /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id416">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Tarea</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta416_317_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crear un circuito. </p>
+<p>Programar el Miibot para que lo realice.</p>
+<p>Incluir un túnel en el circuito.</p>
+<p>Cuando el Miibot entre en el túnel debe de reducir su velocidad y encender los sparkles. Al abandonarlo, volverá a tomar las condiciones iniciales de funcionamiento.</p>
+<p>Se pueden añadir tantos túneles como se estime oportuno.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="04_sparkles.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="06_ultrasonidos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>

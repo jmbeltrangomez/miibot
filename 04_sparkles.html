@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>04 Sparkles | Miibot </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-136"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Miibot</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Miibot</a></li>
+   <li><a href="montaje.html" class="no-ch">Montaje</a></li>
+   <li><a href="crumble.html" class="no-ch">Crumble</a></li>
+   <li class="current-page-parent"><a href="prcticas.html" class="current-page-parent daddy">Prácticas</a>
+   <ul>
+      <li><a href="01_movimientos.html" class="no-ch">01 Movimientos</a></li>
+      <li><a href="02_giros.html" class="no-ch">02 Giros</a></li>
+      <li><a href="03_touch_sensor.html" class="no-ch">03 Touch Sensor</a></li>
+      <li id="active"><a href="04_sparkles.html" class="active no-ch">04 Sparkles</a></li>
+      <li><a href="05_seguidor_de_luz.html" class="no-ch">05 Seguidor de luz</a></li>
+      <li><a href="06_ultrasonidos.html" class="no-ch">06 Ultrasonidos</a></li>
+      <li><a href="07_seguidor_de_lneas.html" class="no-ch">07 Seguidor de líneas</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplo.html" class="no-ch">Ejemplo</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="03_touch_sensor.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="05_seguidor_de_luz.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">04 Sparkles</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id412">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">SPARKLES</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta412_117_2" class="block iDevice_content">
+<div class="exe-text"><p>En esta práctica, vamos a trabajar con los Sparckles, que son LED's RGB. Podemos elegir el color con el que se iluminen.</p>
+<p>El módulo de los Sparckles se han de colocar, inicialmente, en la parte de arriba y se conectara con el cable al puerto D.</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 800px;"><img src="sparckles.jpg" alt="sparckles" title="sparckles" width="800" height="600" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Se va a establecer la siguiente secuencia o algoritmo:</p>
+<ol>
+<li>Iniciar,</li>
+<li>Esperar hasta que no pulsemos el botón Touch Sensor</li>
+<li>Encender los Sparckles</li>
+<li>Avanzar los dos motores un tiempo.</li>
+<li>Detener los motores.</li>
+<li>Apagar los Sparckles.</li>
+<li>Pulsamos de nuevo el botón,</li>
+<li>Encender los Sparckles con otro color,</li>
+<li>Girar hacia un lado utilizando más velocidad en un motor que en otro, durante un tiempo,</li>
+<li>Apagar los Sparchkles</li>
+<li>Para los motores.</li>
+<li>Pulsamos el Touch Sensor.</li>
+<li>Encender los Sparckles con otro color.</li>
+<li>Retroceder.</li>
+<li>Apagar los LED's.</li>
+<li>Para los motores.</li>
+</ol>
+<p>El código en Crumble será:</p>
+<figure class="exe-figure exe-image position-center license-pd" style="width: 403px;"><img src="m1_practica4.jpg" alt="Práctica4" title="Práctica4" width="403" height="646" />
+<figcaption class="figcaption"><span class="author">Fuente propia</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></figcaption>
+</figure></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id413">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Tarea</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta413_316_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Realizar un algoritmo similar al del laberinto de las práctica del laberinto pero se le añadirá las condiciones de que cuando avance el robot se enciendan los sparkles de un color. Al detectar un muro, tras la pulsación del Touch Sensor, al retroceder el robot, los sparkles se encenderán de otro color.</p>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="03_touch_sensor.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="05_seguidor_de_luz.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>
